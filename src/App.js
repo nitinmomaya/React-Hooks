@@ -1,5 +1,6 @@
 import React from 'react';
-import UseState from './Hooks/UseState';
+// import UseState from './Hooks/UseState';
+import UseEffect from './Hooks/UseEffect';
 
 
 
@@ -9,7 +10,8 @@ function App () {
   return <>
 
     <div className="wrapper">
-      <UseState/>
+      {/* <UseState/> */}
+      <UseEffect/>
     </div>
     
   </>;
