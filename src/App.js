@@ -1,38 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import UseState from './Hooks/UseState';
 
 
 
 function App () {
 
-  const [count,setCount]=useState(0);
-
  
-
-  const addCounter=()=>{
-
-    // e.preventDefault();
-
-    setCount(count+1)
-
-  }
-  const decCounter=()=>{
-
-    // e.preventDefault();
-
-    setCount(count-1);
-
-  }
   return <>
 
     <div className="wrapper">
-    <div className="container">
-        <h1>UseState Hooks</h1>
-        <h2> Count Update {count}</h2>
-        <div className="actions">
-        <button className='add-button' onClick={addCounter}>Add Counter</button>
-        <button className='dec-button' onClick={decCounter}> Sub Counter</button>
-        </div>
-    </div>
+      <UseState/>
     </div>
     
   </>;
