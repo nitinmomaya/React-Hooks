@@ -13,35 +13,50 @@ function UseMemo() {
    const [effectmsg,setEffectMsg]=useState("")
 
 
-    // Use Effect take 2 things, 1. Callback function 2. Array of Dependency[]
-    // to cleanup the effect use return and add fucntion accordingly
-    useMemo(()=>{},[])
-
-    useEffect(()=>{
-
-        
-       
-        setEffect(effect+1);
-        setEffectMsg("EFFECT HAS RUN")
-        console.log("UseEffect Started!!!!")
-
-        return()=>{
-  
-            setMsg(`EFFECT HAS RUN ${effect} times`)
-            
-            console.log("")
-            console.log("UseEffect Cleanup")
-        }
-    },[])
-
+    // Use Memo take 2 things, 1. Callback function 2. Array of Dependency[]
+    // it is used to memorise the content
+    // useMemo(()=>{},[])
     const handleChange= useMemo(()=>{
 
         for(let i=0; i<1000000000;i++){}
 
         return count*3;
 
-    },)
+    },[count])
+ 
 
+    useEffect(()=>{
+
+        
+       
+        // setEffect(effect+1);
+        setEffectMsg("EFFECT HAS RUN")
+        console.log("UseEffect Started!!!!")
+
+        return()=>{
+            setEffect(effect+1);
+            setMsg(`SIDE EFFECT HAS RUN ${effect} times`)
+           
+            
+            console.log("")
+            console.log(msg);
+            console.log("UseEffect Cleanup")
+            console.log("")
+        }
+    },[count])
+
+    
+
+
+    
+
+    // const handleChange= ()=>{
+
+    //     for(let i=0; i<1000000000;i++){}
+
+    //     return count*3;
+
+    // }
     const addCounter=()=>setCount(count+1)
   
     
