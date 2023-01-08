@@ -2,7 +2,14 @@ import React, {useState } from 'react'
 import JustAnotherComponent from '../compoents/JustAnotherComponent';
 
 
+//usecallback is similar to useMemo hook
 
+//useMemo remembers the value
+
+//where as useCallback remember the function
+
+//if we use useMemo and sends a value through prop the function is created and useMemo consider that value has been changed
+//but through callback it remember the function, if value changes on the dependency that only it will be re-renderd
 
 
 function UseCallBack() {
