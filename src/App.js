@@ -1,7 +1,9 @@
 import React from 'react';
 // import UseState from './Hooks/UseState';
-import UseEffect from './Hooks/UseEffect';
-import UseMemo from './Hooks/UseMemo';
+// import UseEffect from './Hooks/UseEffect';
+// import UseMemo from './Hooks/UseMemo';
+
+import UseCallBack from './Hooks/UseCallBack';
 
 
 
@@ -13,7 +15,8 @@ function App () {
     <div className="wrapper">
       {/* <UseState/> */}
       {/* <UseEffect/> */}
-      <UseMemo/>
+      {/* <UseMemo/> */}
+      <UseCallBack/>
     </div>
     
   </>;
